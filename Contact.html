@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/Contact.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    
+    <nav>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <div class="toggle-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Booking</a></li>
+                <li><a style="color: darkgoldenrod;" href="Contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Contact -->
+     <div class="container">
+        <div id="contact">
+            <h3>Contact Us</h3>
+            <fieldset>
+                <input placeholder="Your name" id="name" type="text" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" id="email" type="email" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Phone Number" id="number" type="tel" required>
+            </fieldset>
+            <fieldset>
+                <textarea placeholder="Type your Message Here...." id="message" required></textarea>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit">Send</button>
+            </fieldset>
+        </div>
+    </div>
+</div> 
+    <!-- End Contact -->
+    <footer>
+        <div class="footer">
+            <div class="column">
+            <ul>
+            <li class="title">Rent A Car</li>
+            <li>Rent a car and get to know the city! Select your vehicle and explore on your own terms.</li>
+            </ul>
+            </div>
+            
+            <div class="column">
+            <ul>
+            <li class="title">LINKS</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Booking</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+            </div>
+    
+            <div class="column">
+            <ul>
+            <li class="title">Social Media</li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+            </ul>
+            </div>
+            
+            <div class="column">
+            <ul>
+              <div class="footer-margin">
+            
+            <li class="title">NEWSLETTER</li>
+            <li>
+            <form action="#" method="post">
+            <input type="email" name="email" placeholder="Email" maxlength="80" required />
+            <button class="btn1"><i class="fa fa-paper-plane"></i></button>
+            </form>
+            </li>
+            </ul>
+            </div>
+            </div>
+            </footer>
+            <div class="sub-footer">
+            All Copyright Reserved © 2021
+            </div>
+            
+    <!-- JavaScript -->
+          <script>  
+          document.querySelector("#contact-submit").addEventListener('click', function (event) {
+            {
+            var Name = document.getElementById("name").value;
+            var Email = document.getElementById("email").value;
+            var Nbr = document.getElementById("number").value;
+            var Msg = document.getElementById("message").value;
+           alert("Name: "+Name+"\n"+"Email: " +Email+"\n"+"Phone Number: "+Nbr+"\n"+"Msg: "+Msg);
+            }});
+            
+    </script>
+    <script src="js/JavaScript.js"></script>
+</body>
+</html>
