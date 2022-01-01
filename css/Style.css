@@ -3,10 +3,6 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.footer-margin {
-  position: relative;
-  bottom: 70px;
-}
 .toggle-bars {
   position: absolute;
   top: 20px;
@@ -34,27 +30,28 @@ nav {
   display: none;
 }
 .show {
-  display: block;
+  display: block !important;
 }
 .nav ul {
   list-style-type: none;
-  /* padding: 0; */
-  /* margin-left: -20px; */
-  /* margin-top: 10px; */
+  padding: 0;
+  margin-left: -20px;
+  margin-top: 15px;
 }
 .nav ul li {
-  /* padding: 10px 30px; */
+  padding: 10px 0px;
   font-size: 16px;
   text-transform: uppercase;
   margin-top: 10px;
 }
 .nav a {
-  font-family: "Courier New";
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
-  color: gray;
+  color: rgb(214, 213, 213);
 }
 a:hover {
   color: white;
+  text-decoration: underline;
 }
 
 .titre h1 {
@@ -66,10 +63,11 @@ a:hover {
 
 .titre h6 {
   text-align: center;
-  color: lightgrey;
+  color: gray;
   line-height: 0.7;
   letter-spacing: 0.7px;
   font-weight: lighter;
+  font-size: 10px;
 }
 
 .Articls i {
@@ -83,6 +81,7 @@ a:hover {
 .Articls {
   display: flex;
   padding: 3vw;
+  justify-content: center;
   justify-content: space-around;
   align-items: flex-start;
   margin: auto;
@@ -95,8 +94,6 @@ a:hover {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 300;
-  text-align: center;
-  width: 250px;
 }
 
 .Articls h2 {
@@ -148,6 +145,7 @@ div.desc {
   cursor: pointer;
   background-color: black;
   border-radius: 50px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .responsive {
@@ -180,7 +178,7 @@ div.desc {
 }
 
 .footer {
-  font-family: "Courier New";
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: black;
   padding: 30px 0px;
 }
@@ -210,11 +208,13 @@ div.desc {
 
 .footer .column ul li a:hover {
   color: gold;
+  text-decoration: underline;
 }
 
 .footer .column ul .title {
   font-size: 1.2em;
   color: #fff;
+  margin-bottom: 10px;
 }
 
 .footer .column ul li input {
@@ -247,20 +247,15 @@ div.desc {
   background: white;
   padding: 5px 0px;
   text-align: center;
-  color: gray;
+  color: black;
+  font-weight: bold;
   font-size: 12px;
   font-family: "Play", sans-serif;
 }
 
-@media screen and (max-width: 700px) {
-  .Articls {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 @media only screen and (max-width: 700px) {
   .responsive {
-    width: 49.999999%;
+    width: 49.99999%;
     margin: 6px 0;
   }
 }
@@ -276,7 +271,7 @@ div.desc {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    padding: 10px 50px;
+    padding: 10px 30px;
     background-color: #252023;
     color: #f5f5f5;
   }
@@ -303,7 +298,8 @@ div.desc {
   color: white;
   font-size: 36px;
   position: relative;
-  background-size: cover;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 #hero .hero-content {
   position: relative;
@@ -365,15 +361,11 @@ div.desc {
     display: block;
     margin: 0% 0%;
   }
-  /* .footer .column:nth-child(2),
+
+  .footer .column:nth-child(2),
   .footer .column:nth-child(3) {
     width: 40%;
     display: inline-block;
-  } */
-}
-@media screen and (max-width: 700px) {
-  .footer-margin {
-    top: 10px;
   }
 }
 

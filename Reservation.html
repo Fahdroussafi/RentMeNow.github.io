@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/Contact.css">
+    <link rel="stylesheet" href="css/Reservation.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Poppins" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
+    <title>Booking</title>
+
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="img/logo.png" alt=""></div>
+        <div class="toggle-bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a style="color: darkgoldenrod;" href="Reservation.html">Booking</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+   <!-- Booking Form -->
+    <form name="formulaire" class="select">
+
+        <div id="select">
+            <h3 id="title1">Booking</h3>
+            <h4 id="title2">Please Make your choice</h4> 
+
+        <select name="véhicule">
+            <option>choix véhicule</option>
+            <option>moto</option>
+            <option>compact</option>
+            <option>citadin</option>
+            <option>utilitaire</option>
+            <option>berlin</option>
+            <option>camion</option>
+            <option>engin de chantier</option>
+        </select>
+
+        <select name="carburant">
+            <option>Selectioner un carburant</option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+        </select>
+
+        <select name="boitedevitesse">
+            <option>Selectioner la boite de vitesse</option>
+            <option></option>
+        </select>
+        <input placeholder="Nombres des jours" id="number" type="number">
+        <button id="select-submit">Prix final</button>
+        </div>
+    </form>
+    <!-- End Form -->
+
+    <footer>
+        <div class="footer">
+            <div class="column">
+                <ul>
+                    <li class="title">Rent A Car</li>
+                    <li>Rent a car and get to know the city! Select your vehicle and explore on your own terms.</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <ul>
+                    <li class="title">Links</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Reservation.html">Booking</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <ul>
+                    <li class="title">Social Media</li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </div>
+
+           <div class="column">
+                <ul>
+                    <li class="title">NEWSLETTER</li>
+                    <li>
+                        <form action="#" method="post">
+                            <input type="email" name="email" placeholder="Enter your email" maxlength="80" required /><button
+                                class="btn1"><i class="fa fa-paper-plane"></i></button>
+                        </form>
+                        </li>
+                        </ul>
+                    </li>
+                </div>
+                </div>
+        </footer> 
+            <div class="sub-footer">
+            All Copyright Reserved © 2021
+            </div>
+<script src="js/JavaScript.js"></script>
+<script src="js/Reservation.js"></script>
+</body>
+</html>
