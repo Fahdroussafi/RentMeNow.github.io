@@ -144,5 +144,5 @@ document.querySelector("#select-submit").addEventListener('click', function (eve
         }
     }
     price = price * day;
-    alert(`Price : ${price} `+ '€');
+     Swal.fire(`Price: ${price} `+ '€');
 });
