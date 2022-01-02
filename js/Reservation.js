@@ -66,7 +66,7 @@ document.querySelector("#select-submit").addEventListener('click', function (eve
     let day = document.querySelector("#number").value;
     let price;
 
-    // calcule boite de vitesse none de motorbike
+    // calculate gearbox motorbike
     if (gearbox == 'none') {
         if (cars == 'motorbike') {
             if (carfuel == 'Electrique') {
@@ -77,9 +77,9 @@ document.querySelector("#select-submit").addEventListener('click', function (eve
             }
         }
     }
-    // calcule boite de vitesse auto
+    // calculate gearbox auto
     if (gearbox == 'Automatique') {
-        // calcule berlin
+        // calculate berlin
         if (cars == 'berlin') {
             if (carfuel == 'Hybirde') {
                 price = ((20 * 0.19) + (20 * 0.09)) + 20;
@@ -91,16 +91,16 @@ document.querySelector("#select-submit").addEventListener('click', function (eve
                 price = ((20 * 0.19) + (20 * 0.21)) + 20;
             }
         }
-        // calcule truck
+        // calculate truck
         if (cars == 'truck') {
             if (carfuel == 'Diesel') {
                 price = ((250 * 0.19) + (250 * 0.21)) + 250;
             }
         }
     }
-    // calcule boite de vitesse manual
+    // calculate gearbox manual
     if (gearbox == 'Manual') {
-        // calcule compact
+        // calculate compact
         if (cars == 'compact') {
             if (carfuel == 'Hybirde') {
                 price = 14 + (14 * 0.09);
@@ -112,7 +112,7 @@ document.querySelector("#select-submit").addEventListener('click', function (eve
                 price = 14 + (14 * 0.21);
             }
         }
-        // calcule citadin
+        // calculate citadin
         if (cars == 'citadin') {
             if (carfuel == 'Hybirde') {
                 price = 12 + (12 * 0.09);
@@ -127,13 +127,13 @@ document.querySelector("#select-submit").addEventListener('click', function (eve
                 price = 12 + (12 * 0.05);
             }
         }
-        // calcule utility
+        // calculate utility
         if (cars == 'utility') {
             if (carfuel == 'Diesel') {
                 price = 16 + (16 * 0.21);
             }
         }
-        // calcule construction machine
+        // calculate construction machine
         if (cars == 'construction machine') {
             if (carfuel == 'Diesel') {
                 price = 900 + (900 * 0.21);
