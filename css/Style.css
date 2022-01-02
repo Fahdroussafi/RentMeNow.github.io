@@ -3,6 +3,9 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.logo {
+  margin-top: 15px;
+}
 .toggle-bars {
   position: absolute;
   top: 20px;
@@ -42,12 +45,13 @@ nav {
   padding: 10px 0px;
   font-size: 16px;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .nav a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-decoration: none;
   color: rgb(214, 213, 213);
+
 }
 a:hover {
   color: white;
