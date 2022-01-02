@@ -5,6 +5,8 @@ body {
 }
 .logo {
   margin-top: 15px;
+  padding-top:8px;
+    /* text-transform:uppercase; */
 }
 .toggle-bars {
   position: absolute;
@@ -28,6 +30,9 @@ nav {
   justify-content: flex-start;
   min-height: 10px;
   position: relative;
+  border-radius:0px;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
 }
 .nav {
   display: none;
@@ -48,7 +53,7 @@ nav {
   margin-top: 20px;
 }
 .nav a {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   text-decoration: none;
   color: rgb(214, 213, 213);
 
@@ -61,7 +66,7 @@ a:hover {
 .titre h1 {
   text-align: center;
   line-height: 0.7;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   font-size: 40px;
 }
 
@@ -85,7 +90,7 @@ a:hover {
 .Articls {
   display: flex;
   padding: 3vw;
-  justify-content: center;
+  /* justify-content: center; */
   justify-content: space-around;
   align-items: flex-start;
   margin: auto;
@@ -98,6 +103,7 @@ a:hover {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 300;
+  width :250px;
 }
 
 .Articls h2 {
@@ -110,6 +116,7 @@ a:hover {
 div.gallery img {
   width: 100%;
   height: auto;
+  align-content: flex-end;
 }
 
 div.desc {
@@ -118,6 +125,7 @@ div.desc {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-style: normal;
+  top: 15px;
 }
 
 * {
@@ -166,6 +174,7 @@ div.desc {
   margin: auto;
   text-align: center;
   max-width: 100%;
+  align-items: flex-start;
 }
 
 .About p {
@@ -174,6 +183,7 @@ div.desc {
   line-height: 32px;
   font-family: "Segoe UI", "Helvetica Neue", sans-serif;
   font-weight: lighter;
+  
 }
 
 .About img {
@@ -186,6 +196,11 @@ div.desc {
   background-color: black;
   padding: 30px 0px;
 }
+.title-position{
+  position:relative;
+  bottom: 5px;
+}
+
 
 .footer .column {
   width: 20%;
@@ -218,7 +233,7 @@ div.desc {
 .footer .column ul .title {
   font-size: 1.2em;
   color: #fff;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .footer .column ul li input {
@@ -256,7 +271,27 @@ div.desc {
   font-size: 12px;
   font-family: "Play", sans-serif;
 }
-
+.footer-margin{
+  position: relative;
+  bottom: 54px;
+}
+@media screen and (max-width: 700px){
+  .Articls{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+@media screen and (max-width: 700px ){
+  .footer-margin{
+    margin-top: 30%;
+  }
+}
+@media screen and (max-width: 700px){
+  .title-position{
+    margin-top: 20%;
+  }
+}
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
@@ -278,6 +313,7 @@ div.desc {
     padding: 10px 30px;
     background-color: black;
     color: #f5f5f5;
+    
   }
   .toggle-bars {
     display: none;
@@ -304,6 +340,9 @@ div.desc {
   position: relative;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #hero .hero-content {
   position: relative;
@@ -315,7 +354,8 @@ div.desc {
 }
 #hero h4 {
   font-size: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-top: 0;
+    margin-bottom: 40px;
 }
 #hero a {
   text-decoration: none;
