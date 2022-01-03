@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="stylesheet" href="css/Contact.css">
+    <link rel="stylesheet" href="css/Booking.css">
     <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito|Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
-    
-    <title>Contact Us</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>Booking</title>
+
 </head>
 <body>
     <nav>
@@ -26,36 +28,47 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Gallery.html">Gallery</a></li>
-                <li><a href="Reservation.html">Booking</a></li>
-                <li><a style="color: darkgoldenrod;" href="Contact.html">Contact Us</a></li>
+                <li><a style="color: darkgoldenrod;" href="Booking.html">Booking</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>
-    <!-- Contact -->
-     <div class="container">
-        <div id="contact">
-            <h3>Contact Us</h3>
-            <fieldset>
-                <input placeholder="Your name" id="name" type="text" required autofocus>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Your Email Address" id="email" type="email" required>
-            </fieldset>
-            <fieldset>
-                <input placeholder="Your Phone Number" id="number" type="tel" required>
-            </fieldset>
-            <fieldset>
-                <textarea placeholder="Type your Message Here...." id="message" required></textarea>
-            </fieldset>
-            <fieldset>
-                <button name="submit" type="submit" id="contact-submit">Send</button>
-            </fieldset>
-        </div>
-    </div>
-</div> 
-    <!-- End Contact -->
+   <!-- Booking Form -->
+    <form name="form" class="select">
 
-   <footer>
+        <div id="select">
+            <h3 id="title1">Booking</h3>
+            <h4 id="title2">Please Make your choice</h4> 
+        <select name="vehicle">
+            <option>Vehicle choice</option>
+            <option>motorbike</option>
+            <option>compact</option>
+            <option>citadin</option>
+            <option>Utility</option>
+            <option>berlin</option>
+            <option>truck</option>
+            <option>construction machine</option>
+        </select>
+
+        <select name="fuel">
+            <option>Select your fuel</option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+        </select>
+
+        <select name="gearbox">
+            <option>Select your GearBox</option>
+            <option></option>
+        </select>
+        <input placeholder="Number of Days" id="number" type="number">
+        <button id="select-submit">Final Price</button>
+        </div>
+    </form>
+    <!-- End Form -->
+
+    <footer>
         <div class="footer">
             <div class="column">
                 <ul>
@@ -69,7 +82,7 @@
                     <li class="title">Links</li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="Gallery.html">Gallery</a></li>
-                    <li><a href="Reservation.html">Booking</a></li>
+                    <li><a href="Booking.html">Booking</a></li>
                     <li><a href="Contact.html">Contact Us</a></li>
                 </ul>
             </div>
@@ -102,20 +115,7 @@
               <div class="sub-footer">
               All Copyright Reserved © 2021
               </div>
-            
-    <!-- JavaScript -->
-          <script>  
-          document.querySelector("#contact-submit").addEventListener('click', function (event) {
-            {
-            var Name = document.getElementById("name").value;
-            var Email = document.getElementById("email").value;
-            var Nbr = document.getElementById("number").value;
-            var Msg = document.getElementById("message").value;
-            // alert("Name: "+Name+"\n"+"Email: " +Email+"\n"+"Phone Number: "+Nbr+"\n"+"Message: "+Msg);
-           alert(`Name: ${Name} \n Email: ${Email} \n Phone Number: ${Nbr} \n Message: ${Msg}`);
-            }});
-            
-    </script>
-    <script src="js/JavaScript.js"></script>
+<script src="js/JavaScript.js"></script>
+<script src="js/Reservation.js"></script>
 </body>
 </html>
