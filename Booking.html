@@ -76,7 +76,7 @@
         vehicle_type.options[vehicle_type.options.length] = new Option(x, x);
       }
       vehicle_type.onchange = function () {
-        //vider gbs- et Carburants- 
+        //clean gbs- and fuel- 
         gearbox.length = 0;
         fuel.length = 0;
 
@@ -201,7 +201,7 @@
     }
   </script>
  <!-- Booking Form -->
-        <form name="form" class="select">
+        <form class="select">
 
           <div id="select">
             <h3 id="title1">Booking</h3>
@@ -243,12 +243,12 @@
             <input type="number" name="nbrjour" id="nbrjours" min="1" value="1">
           </div>
         </div>
-        <div class="blank"></div>
+        <!-- <div class="blank"></div> -->
 
-        <input type="button" value="Reserver" id="Envoyer" onclick="Calcule()">
+        <input type="button" value="Book" id="Envoyer" onclick="Calcule()">
       </div>
       </form>
-      <p id="Erreur" style="color:rgb(255, 0, 0)"></p>
+      <p id="Erreur" style="color: red"></p>
       <p id="res" style="color:white"></p>
 
 <!-- End Form -->
