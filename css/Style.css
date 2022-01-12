@@ -5,13 +5,13 @@ body {
 }
 .logo {
   margin-top: 15px;
-  padding-top:8px;
-    /* text-transform:uppercase; */
+  padding-top: 8px;
+  /* text-transform:uppercase; */
 }
 .toggle-bars {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 40px;
+  right: 35px;
   cursor: pointer;
 }
 .toggle-bars .bar {
@@ -24,26 +24,17 @@ body {
 nav {
   padding: 10px 50px;
   background-color: black;
-  color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   min-height: 10px;
-  position: relative;
-  border-radius:0px;
-  border-bottom-left-radius:0;
-  border-bottom-right-radius:0;
+  /* position: relative; */
 }
 .nav {
   display: none;
 }
 .show {
-  display: block !important;
+  display: block;
 }
 .nav ul {
   list-style-type: none;
-  padding: 0;
-  margin-left: -20px;
   margin-top: 15px;
 }
 .nav ul li {
@@ -53,10 +44,8 @@ nav {
   margin-top: 20px;
 }
 .nav a {
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
   text-decoration: none;
   color: rgb(214, 213, 213);
-
 }
 a:hover {
   color: white;
@@ -66,7 +55,6 @@ a:hover {
 .titre h1 {
   text-align: center;
   line-height: 0.7;
-  /* letter-spacing: 1px; */
   font-size: 40px;
 }
 
@@ -80,9 +68,9 @@ a:hover {
 }
 
 .Articls i {
-  color: black;
+  /* color: black; */
   position: relative;
-  top: -5%;
+  /* top: -5%; */
   left: 45%;
   font-size: 50px;
 }
@@ -90,10 +78,10 @@ a:hover {
 .Articls {
   display: flex;
   padding: 3vw;
-  /* justify-content: center; */
+  /* justify-content: center;   */
   justify-content: space-around;
   align-items: flex-start;
-  margin: auto;
+  /* margin: auto; */
 }
 
 .Articls p {
@@ -103,7 +91,7 @@ a:hover {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 300;
-  width :250px;
+  width: 250px;
 }
 
 .Articls h2 {
@@ -116,7 +104,7 @@ a:hover {
 div.gallery img {
   width: 100%;
   height: auto;
-  align-content: flex-end;
+  /* align-content: flex-end; */
 }
 
 div.desc {
@@ -124,8 +112,6 @@ div.desc {
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-style: normal;
-  top: 15px;
 }
 
 * {
@@ -134,7 +120,7 @@ div.desc {
 
 .desc button {
   font-size: 15px;
-  font-weight: 500;
+  /* font-weight: 500; */
   padding: 10px 30px;
   font-family: "Poppins", sans-serif;
   border: none;
@@ -161,9 +147,9 @@ div.desc {
 }
 
 .responsive {
-  padding: 0 6px;
+  padding: 1px;
   float: left;
-  width: 24.99999%;
+  width: 24%;
 }
 
 #titre {
@@ -183,7 +169,6 @@ div.desc {
   line-height: 32px;
   font-family: "Segoe UI", "Helvetica Neue", sans-serif;
   font-weight: lighter;
-  
 }
 
 .About img {
@@ -196,11 +181,10 @@ div.desc {
   background-color: black;
   padding: 30px 0px;
 }
-.title-position{
-  position:relative;
+.title-position {
+  position: relative;
   bottom: 5px;
 }
-
 
 .footer .column {
   width: 20%;
@@ -271,30 +255,29 @@ div.desc {
   font-size: 12px;
   font-family: "Play", sans-serif;
 }
-.footer-margin{
+.footer-margin {
   position: relative;
   bottom: 54px;
 }
-@media screen and (max-width: 700px){
-  .Articls{
+@media screen and (max-width: 700px) {
+  .Articls {
     flex-direction: column;
     align-items: center;
   }
-  
 }
-@media screen and (max-width: 700px ){
-  .footer-margin{
+@media screen and (max-width: 700px) {
+  .footer-margin {
     margin-top: 30%;
   }
 }
-@media screen and (max-width: 700px){
-  .title-position{
+@media screen and (max-width: 700px) {
+  .title-position {
     margin-top: 20%;
   }
 }
 @media only screen and (max-width: 700px) {
   .responsive {
-    width: 49.99999%;
+    width: 50%;
     margin: 6px 0;
   }
 }
@@ -313,7 +296,6 @@ div.desc {
     padding: 10px 30px;
     background-color: black;
     color: #f5f5f5;
-    
   }
   .toggle-bars {
     display: none;
@@ -355,7 +337,7 @@ div.desc {
 #hero h4 {
   font-size: 20px;
   margin-top: 0;
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 #hero a {
   text-decoration: none;
@@ -383,7 +365,7 @@ div.desc {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: #00000078;
+  background: #1a181878;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }

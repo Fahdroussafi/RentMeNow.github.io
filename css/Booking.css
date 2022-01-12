@@ -20,8 +20,12 @@
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.65em auto, 100%;
+  width: 100%;
 }
 
+#res {
+  text-align: center;
+}
 #title1 {
   text-align: center;
   color: white;
@@ -32,10 +36,9 @@
 #title2 {
   text-align: center;
   color: white;
-  display: block; 
+  display: block;
   font-weight: 400;
 }
-
 #select {
   background-color: black;
   padding: 30px;
@@ -43,8 +46,7 @@
   display: flex;
   flex-direction: column;
 }
-
-#select-submit {
+#Envoyer {
   cursor: pointer;
   width: 100%;
   border: none;
@@ -55,13 +57,13 @@
   margin-top: 10px;
   border-radius: 0.25em;
 }
-#select-submit:hover {
+#Envoyer:hover {
   background: gold;
   color: black;
   transition: background-color 0.3s ease-in-out;
 }
 
-#number {
+#nbrjours {
   width: 100%;
   border: none;
   background: #ffffff;
@@ -70,4 +72,10 @@
   font-size: 15px;
   margin-top: 10px;
   border-radius: 0.25em;
+}
+label {
+  color: white;
+}
+#Erreur {
+  text-align: center;
 }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,110 +12,294 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito|Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
     <title>Booking</title>
 
 </head>
-<body>
-    <nav>
-        <div class="logo"><img src="img/logo.png" alt=""></div>
-        <div class="toggle-bars">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div class="nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li><a style="color: darkgoldenrod;" href="Booking.html">Booking</a></li>
-                <li><a href="Contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
-   <!-- Booking Form -->
-    <form name="form" class="select">
+    <body> 
+      <nav>
+    <div class="logo"><img src="img/logo.png" alt=""></div>
+    <div class="toggle-bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a style="color: darkgoldenrod;" href="Booking.html">Booking</a></li>
+            <li><a href="Contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
 
-        <div id="select">
+  <script>
+    var subjectObject = {
+      "Motorbike": {
+        "Electrique": [],
+        "Essence": []
+      },
+      "Citadine": {
+        "Electrique": ["Manual"],
+        "hybride": ["Manual"],
+        "Essence": ["Manual"],
+        "Diesel": ["Manual"]
+      },
+      "Compact": {
+        "hybride": ["Manual"],
+        "Essence": ["Manual"],
+        "Diesel": ["Manual"]
+      },
+      "Berline": {
+        "hybride": ["Automatique"],
+        "Essence": ["Automatique"],
+        "Diesel": ["Automatique"]
+      },
+      "Utility": {
+        "Diesel": ["Manual"]
+      },
+      "Construction machine": {
+        "Essence": ["Manual"],
+        "Diesel": ["Manual"]
+      },
+      "Truck": {
+        "Diesel": ["Automatique"]
+
+      }
+    }
+    window.onload = function () {
+      var vehicle_type = document.getElementById("vt");
+      var fuel = document.getElementById("Carburant");
+      var gearbox = document.getElementById("gb");
+      for (var x in subjectObject) {
+        vehicle_type.options[vehicle_type.options.length] = new Option(x, x);
+      }
+      vehicle_type.onchange = function () {
+        //vider gbs- et Carburants- 
+        gearbox.length = 0;
+        fuel.length = 0;
+
+        for (var y in subjectObject[this.value]) {
+          fuel.options[fuel.options.length] = new Option(y, y);
+        }
+      }
+      fuel.onchange = function () {
+        //clean gearbox
+        gearbox.length = 0;
+        //display correct values
+        // for (var y in subjectObject[vehicle_type.value][this.value]) {
+        var z = subjectObject[vehicle_type.value][this.value];
+        for (var i = 0; i < z.length; i++) {
+
+          gearbox.options[gearbox.options.length] = new Option(z[i], z[i]);
+        }
+      }
+    }
+    function Calcule() {
+      var total = 0;
+      var nbrjour = document.getElementById("nbrjours").value;
+      var typevehicule = document.getElementById("vt").value;
+      var fuel = document.getElementById("Carburant").value;
+      var gb = document.getElementById("gb").value;
+      switch (typevehicule) {
+        case "Motorbike":
+          if (fuel == "Essence") {
+            total = nbrjour * (1.14 + 10);
+            break;
+          }
+          else {
+            total = nbrjour * (0.05 + 10);
+            break;
+          }
+        case "Citadine":
+          {
+            if (fuel == "Electrique") {
+              total = nbrjour * (5 / 100 * 12 + 12);
+              break;
+            }
+            else if (fuel == "hybride") {
+              total = nbrjour * (9 / 100 * 12 + 12);
+              break;
+            }
+            else if (carburant == "Essence") {
+              total = nbrjour * (14 / 100 * 12 + 12);
+              break;
+            }
+            else {
+              total = nbrjour * (21 / 100 * 12 + 12);
+              break;
+            }
+          }
+
+        case "Compact":
+          {
+
+            if (fuel == "hybride") {
+              total = nbrjour * (9 / 100 * 14 + 14);
+              break;
+            }
+            else if (fuel == "Essence") {
+              total = nbrjour * (14 / 100 * 14 + 14);
+              break;
+            }
+            else {
+              total = nbrjour * (21 / 100 * 14 + 14);
+              break;
+            }
+          }
+
+        case "Berline":
+          {
+
+            if (fuel == "hybride") {
+              total = nbrjour * (9 / 100 * 20 + 20);
+              break;
+            }
+            else if (fuel == "Essence") {
+              total = nbrjour * (14 / 100 * 20 + 20);
+              break;
+            }
+            else {
+              total = nbrjour * (21 / 100 * 20 * +20);
+              break;
+            }
+          }
+        case "Utility":
+          {
+
+            if (fuel == "hybride") {
+              total = nbrjour * (21 / 100 * 16 + 16);
+              break;
+            }
+          }
+        case "Construction machine":
+          {
+
+            if (fuel == "Essence") {
+              total = nbrjour * (14 / 100 * 900 + 900);
+              break;
+            }
+            else {
+              total = nbrjour * (21 / 100 * 900 + 900);
+              break;
+            }
+          }
+        case "Truck":
+          {
+
+            total = nbrjour * (21 / 100 * 250 + 250);
+            break;
+
+          }
+        default: document.getElementById("Erreur").innerHTML = "Entry error try again";
+      }
+      if (total > 0) {
+        document.getElementById("Erreur").innerHTML = "";
+        document.getElementById("res").innerHTML = "Reservation passed successfully !! total :" + total + "€";
+      }
+    }
+  </script>
+ <!-- Booking Form -->
+        <form name="form" class="select">
+
+          <div id="select">
             <h3 id="title1">Booking</h3>
             <h4 id="title2">Please Make your choice</h4> 
-        <select name="vehicle">
-            <option>Vehicle choice</option>
-            <option>motorbike</option>
-            <option>compact</option>
-            <option>citadin</option>
-            <option>Utility</option>
-            <option>berlin</option>
-            <option>truck</option>
-            <option>construction machine</option>
-        </select>
-
-        <select name="fuel">
-            <option>Select your fuel</option>
-            <option></option>
-            <option></option>
-            <option></option>
-            <option></option>
-        </select>
-
-        <select name="gearbox">
-            <option>Select your GearBox</option>
-            <option></option>
-        </select>
-        <input placeholder="Number of Days" id="number" type="number">
-        <button id="select-submit">Final Price</button>
+        <div class="row">
+          <div class="label_column">
+            <label for="fname">Vehicle Type :</label>
+          </div>
+          <div class="input_column">
+            <select name="vehicle_type" id="vt">
+              <option value="" selected="selected">Select the type of vehicle </option>
+            </select>
+          </div>
         </div>
-    </form>
-    <!-- End Form -->
+        <div class="row">
+          <div class="label_column">
+            <label for="carburant">Fuel :</label>
+          </div>
+          <div class="input_column">
+            <select name="Carburant" id="Carburant">
 
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="label_column">
+            <label for="carburant">Gearbox :</label>
+          </div>
+          <div class="input_column">
+            <select name="gb" id="gb">
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="label_column">
+            <label for="nbrjour">Number of days :</label>
+          </div>
+          <div class="input_column">
+            <input type="number" name="nbrjour" id="nbrjours" min="1" value="1">
+          </div>
+        </div>
+        <div class="blank"></div>
+
+        <input type="button" value="Reserver" id="Envoyer" onclick="Calcule()">
+      </div>
+      </form>
+      <p id="Erreur" style="color:rgb(255, 0, 0)"></p>
+      <p id="res" style="color:white"></p>
+
+<!-- End Form -->
     <footer>
-        <div class="footer">
-            <div class="column">
-                <ul>
-                    <li class="title">Rent A Car</li>
-                    <li>Rent a car and get to know the city! Select your vehicle and explore on your own terms.</li>
-                </ul>
-            </div>
+      <div class="footer">
+          <div class="column">
+              <ul>
+                  <li class="title">Rent A Car</li>
+                  <li>Rent a car and get to know the city! Select your vehicle and explore on your own terms.</li>
+              </ul>
+          </div>
 
-            <div class="column">
-                <ul>
-                    <li class="title">Links</li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Gallery.html">Gallery</a></li>
-                    <li><a href="Booking.html">Booking</a></li>
-                    <li><a href="Contact.html">Contact Us</a></li>
-                </ul>
-            </div>
+          <div class="column">
+              <ul>
+                  <li class="title">Links</li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="Gallery.html">Gallery</a></li>
+                  <li><a href="Booking.html">Booking</a></li>
+                  <li><a href="Contact.html">Contact Us</a></li>
+              </ul>
+          </div>
 
-            <div class="column">
-                <ul>
-                    <li class="title">Social Media</li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Twitter</a></li>
-                </ul>
-            </div>
+          <div class="column">
+              <ul>
+                  <li class="title">Social Media</li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">LinkedIn</a></li>
+                  <li><a href="#">Twitter</a></li>
+              </ul>
+          </div>
 
-            <div class="column" style="position: relative;  bottom: 40px;">
-                <ul>
-                  <div  class="footer-margin">
-                  <li class="title">NEWSLETTER</li>
-                  <li>
-                    <form action="#" method="post">
-                    <input type="email" name="email" placeholder="Email*"  maxlength="80" required /><button class="btn1"><i class="fa fa-paper-plane"></i></button>
-                  </form>
-                  </li>
-                </ul>
+          <div class="column" style="position: relative;  bottom: 40px;">
+              <ul>
+                <div  class="footer-margin">
+                <li class="title">NEWSLETTER</li>
+                <li>
+                  <form action="#" method="post">
+                  <input type="email" name="email" placeholder="Email*"  maxlength="80" required /><button class="btn1"><i class="fa fa-paper-plane"></i></button>
+                </form>
+                </li>
+              </ul>
+            </div>
               </div>
-                </div>
-              </div>
-              </div>
-              </footer>
-              <div class="sub-footer">
-              All Copyright Reserved © 2021
-              </div>
+            </div>
+            </div>
+            </footer>
+            <div class="sub-footer">
+            All Copyright Reserved © 2021
+            </div>
 <script src="js/JavaScript.js"></script>
-<script src="js/Reservation.js"></script>
-</body>
-</html>
+  
+    </body>
+    </html>
