@@ -6,7 +6,6 @@ body {
 .logo {
   margin-top: 15px;
   padding-top: 8px;
-  /* text-transform:uppercase; */
 }
 .toggle-bars {
   position: absolute;
@@ -25,7 +24,6 @@ nav {
   padding: 10px 50px;
   background-color: black;
   min-height: 10px;
-  /* position: relative; */
 }
 .nav {
   display: none;
@@ -80,7 +78,7 @@ a:hover {
   padding: 3vw;
   /* justify-content: center;   */
   justify-content: space-around;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   /* margin: auto; */
 }
 
@@ -100,6 +98,7 @@ a:hover {
   text-align: center;
   font-weight: normal;
 }
+
 
 div.gallery img {
   width: 100%;
@@ -148,6 +147,7 @@ div.desc {
 
 .responsive {
   padding: 1px;
+  padding-left: 10px;
   float: left;
   width: 24%;
 }
@@ -217,7 +217,7 @@ div.desc {
 .footer .column ul .title {
   font-size: 1.2em;
   color: #fff;
-  /* margin-bottom: 10px; */
+   margin-bottom: 10px; 
 }
 
 .footer .column ul li input {
@@ -255,30 +255,14 @@ div.desc {
   font-size: 12px;
   font-family: "Play", sans-serif;
 }
-.footer-margin {
+/* .footer-margin {
   position: relative;
-  bottom: 54px;
-}
+  /bottom: 54px; 
+} */
 @media screen and (max-width: 700px) {
   .Articls {
     flex-direction: column;
     align-items: center;
-  }
-}
-@media screen and (max-width: 700px) {
-  .footer-margin {
-    margin-top: 30%;
-  }
-}
-@media screen and (max-width: 700px) {
-  .title-position {
-    margin-top: 20%;
-  }
-}
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 50%;
-    margin: 6px 0;
   }
 }
 
@@ -328,7 +312,7 @@ div.desc {
 }
 #hero .hero-content {
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 #hero h1 {
   margin-bottom: 10px;
@@ -392,35 +376,5 @@ div.desc {
   .footer .column:nth-child(3) {
     width: 40%;
     display: inline-block;
-  }
-}
-
-@media (max-width: 1200px) {
-  .footer .column ul li input {
-    padding: 5px 5px;
-    outline: none;
-    border: 0;
-    width: 70%;
-    height: 34px;
-    color: #1e1e1e;
-  }
-  .footer .column ul li .btn1 {
-    position: relative;
-    top: 2px;
-  }
-}
-
-@media (max-width: 940px) {
-  .footer .column ul li input {
-    padding: 5px 5px;
-    outline: none;
-    border: 0;
-    width: 60%;
-    height: 34px;
-    color: #1e1e1e;
-  }
-  .footer .column ul li .btn1 {
-    position: relative;
-    top: 2px;
   }
 }

@@ -9,7 +9,7 @@ body {
 }
 .toggle-bars {
   position: absolute;
-  top: 20px;
+  top: 40px;
   right: 30px;
   cursor: pointer;
 }
@@ -218,7 +218,7 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
-@media screen and (min-width: 501px) and (max-width: 700px) {
+/* @media screen and (min-width: 501px) and (max-width: 700px) {
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -227,7 +227,7 @@ a:hover {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
-}
+} */
 @media (max-width: 720px) {
   .footer .column {
     width: 90%;
@@ -239,35 +239,5 @@ a:hover {
   .footer .column:nth-child(3) {
     width: 40%;
     display: inline-block;
-  }
-}
-
-@media (max-width: 1200px) {
-  .footer .column ul li input {
-    padding: 5px 5px;
-    outline: none;
-    border: 0;
-    width: 70%;
-    height: 34px;
-    color: #1e1e1e;
-  }
-  .footer .column ul li .btn1 {
-    position: relative;
-    top: 2px;
-  }
-}
-
-@media (max-width: 940px) {
-  .footer .column ul li input {
-    padding: 5px 5px;
-    outline: none;
-    border: 0;
-    width: 60%;
-    height: 34px;
-    color: #1e1e1e;
-  }
-  .footer .column ul li .btn1 {
-    position: relative;
-    top: 2px;
   }
 }

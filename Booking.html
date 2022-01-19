@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Nunito|Poppins" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
+   <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>  -->
     <title>Booking</title>
 
 </head>
@@ -73,7 +73,7 @@
       var fuel = document.getElementById("Carburant");
       var gearbox = document.getElementById("gb");
       for (var x in subjectObject) {
-        vehicle_type.options[vehicle_type.options.length] = new Option(x, x);
+        vehicle_type.options[vehicle_type.options.length] = new Option(x);
       }
       vehicle_type.onchange = function () {
         //clean gbs- and fuel- 
@@ -81,7 +81,7 @@
         fuel.length = 0;
 
         for (var y in subjectObject[this.value]) {
-          fuel.options[fuel.options.length] = new Option(y, y);
+          fuel.options[fuel.options.length] = new Option(y);
         }
       }
       fuel.onchange = function () {
@@ -92,7 +92,7 @@
         var z = subjectObject[vehicle_type.value][this.value];
         for (var i = 0; i < z.length; i++) {
 
-          gearbox.options[gearbox.options.length] = new Option(z[i], z[i]);
+          gearbox.options[gearbox.options.length] = new Option(z);
         }
       }
     }
@@ -161,7 +161,7 @@
               break;
             }
             else {
-              total = nbrjour * (21 / 100 * 20 * +20);
+              total = nbrjour * (21 / 100 * 20 + 20);
               break;
             }
           }
@@ -195,7 +195,7 @@
         default: document.getElementById("Erreur").innerHTML = "Entry error try again";
       }
       if (total > 0) {
-        document.getElementById("Erreur").innerHTML = "";
+
         document.getElementById("res").innerHTML = "Reservation passed successfully !! total :" + total + "€";
       }
     }
